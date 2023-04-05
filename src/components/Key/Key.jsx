@@ -7,22 +7,22 @@ const Key = ({ keyVal, bigKey, disabled }) => {
 
     const selectLetter = () => {
         if (gameOver.gameOver) return;
-        if (keyVal === 'ENTER') {
+        if (keyVal === "ENTER") {
             onEnter();
-        } else if (keyVal === 'DELETE') {
+        } else if (keyVal === "DELETE") {
             onDelete();
         } else {
             onSelectLetter(keyVal);
         }
-    }
+    };
 
     return (
         <div
-            className='key'
-            id={bigKey ? 'big' : disabled && 'disabled'}
+            className="key"
+            id={bigKey ? "big" : disabled && "disabled"}
             onClick={selectLetter}
         >
-            { keyVal }
+            {keyVal}
         </div>
     );
 };

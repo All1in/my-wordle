@@ -5,7 +5,6 @@ import Key from '../Key/Key';
 
 const KeyBoard = () => {
     const {
-        board,
         disabledLetters,
         currAttempt,
         gameOver,

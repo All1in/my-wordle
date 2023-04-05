@@ -2,7 +2,7 @@ import Letter from "../Letter/Letter";
 
 const Board = () => {
     return (
-        <div>
+        <div className='board'>
             <div className='row'>
                 <Letter letterPos={0} attemptVal={0} />
                 <Letter letterPos={1} attemptVal={0} />

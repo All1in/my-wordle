@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from "react";
-import { AppContext } from "../App";
+import { useContext, useEffect } from "react";
+import { AppContext } from "../../context/AppContext";
 
 const Letter = ({ letterPos, attemptVal }) => {
     const { board, setDisabledLetters, currAttempt, correctWord } =
@@ -18,9 +18,10 @@ const Letter = ({ letterPos, attemptVal }) => {
             setDisabledLetters((prev) => [...prev, letter]);
         }
     }, [currAttempt.attempt]);
+
     return (
         <div className="letter" id={letterState}>
-            {letter}
+            { letter }
         </div>
     );
 }
