@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from '../../context/AppContext';
 
 const Key = ({ keyVal, bigKey, disabled }) => {
     const { gameOver, onSelectLetter, onDelete, onEnter } =
@@ -7,9 +7,9 @@ const Key = ({ keyVal, bigKey, disabled }) => {
 
     const selectLetter = () => {
         if (gameOver.gameOver) return;
-        if (keyVal === "ENTER") {
+        if (keyVal === 'ENTER') {
             onEnter();
-        } else if (keyVal === "DELETE") {
+        } else if (keyVal === 'DELETE') {
             onDelete();
         } else {
             onSelectLetter(keyVal);
@@ -18,8 +18,8 @@ const Key = ({ keyVal, bigKey, disabled }) => {
 
     return (
         <div
-            className="key"
-            id={bigKey ? "big" : disabled && "disabled"}
+            className='key'
+            id={bigKey ? 'big' : disabled && 'disabled'}
             onClick={selectLetter}
         >
             { keyVal }
